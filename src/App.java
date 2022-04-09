@@ -1,8 +1,6 @@
-import java.rmi.registry.RegistryHandler;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -53,9 +51,9 @@ public class App {
         List<Integer> problem4 = new ArrayList(Arrays.asList(0, 1, 0, 3, 12));
         List<Integer> array4 = new ArrayList(Arrays.asList(0));
         printAnswer("Original List " + problem4);
-        printIntArray(problem3(problem4));
+        printIntArray(problem4(problem4));
         printAnswer("Original List " + array4);
-        printIntArray(problem3(array4));
+        printIntArray(problem4(array4));
 
         printProb("Problem 5");
         List<Integer> nums1 = new ArrayList(Arrays.asList(1, 2, 3, 0, 0, 0));
@@ -66,9 +64,9 @@ public class App {
         printIntArray(problem5(nums1, nums2, m, n));
 
         printProb("Problem 6");
-        List<Integer> n1 = new ArrayList(Arrays.asList(1, 2, 3, 0, 0, 0));
+        List<Integer> n1 = new ArrayList(Arrays.asList(10, 2, 3, 0, 0, 0));
         int a = 3;
-        List<Integer> n2 = new ArrayList(Arrays.asList(2, 5, 6));
+        List<Integer> n2 = new ArrayList(Arrays.asList(2, 5, 9));
         int b = 3;
         printAnswer("Original List " + n1 + " & " + n2);
         printIntArray(problem6(n1, n2, a, b));
@@ -120,6 +118,7 @@ public class App {
                 numsInArray[counter++] = numsInArray[i];
             }
         }
+        printAnswer("counter val: " +counter);
         while (counter < arrayLength) {
             numsInArray[counter++] = 0;
         }
@@ -162,10 +161,9 @@ public class App {
 
         for (int i = 0; i < arrayLength; i++) {
             for (int j = i + 1; j < arrayLength; j++) {
-                //int tmp = 0;
                 if (mergeArray[i] > mergeArray[j]) {
-                    //tmp = mergeArray[i];
                     swap(mergeArray, i, j);
+                   
                 }
             }
         }
