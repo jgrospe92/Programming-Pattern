@@ -32,10 +32,10 @@
 ## Problem 1
 - Given an integer list `nums` sorted in non-decreasing order, return an `array` of **the squares of each number** sorted in non-decreasing order.
 - Example: 
-```java
-input: List<Integer> nums = Arrays.asList(-4,-1,0,3,10);
-Output: [0,1,9,16,100]
-```
+    ```java
+    input: List<Integer> nums = Arrays.asList(-4,-1,0,3,10);
+    Output: [0,1,9,16,100]
+    ```
 ### Explanation
 - After squaring, the array becomes [16,1,0,100].
 - After sorting, it becomes [0,1,9,16,100].
@@ -48,7 +48,7 @@ Output: [0,1,9,16,100]
 
 ## Problem 2
 - Squaring each element and sorting the new array is very trivial, could you find an 0(n) solution using a different approach for the previous problem.
-  
+
 ### Explanation
  - The first solution is not efficient since it traverse the array twice. The first one is to square the array and the other one is to sort the array. We need to find a way that does the two actions in a single loop.
 
@@ -81,6 +81,14 @@ Output: [0,1,9,16,100]
 
 ## Problem 5
 - Given two sorted integer lists `nums1` and `nums2`, merge `nums2` into `nums1` as **one sorted array**. The number of elements initialized in `nums1` and `nums2` are `m` and `n` respectively. You may assume that `nums1` has a size equal to `m + n` such that it has enough space to hold additional elements from `nums2`.
+- Example: 
+    ```java
+    List<Integer> nums1 = Arrays.asList(1,2,3,0,0,0);
+    int m = 3;
+    List<Integer> nums2 = Arrays.asList(2,5,6);
+    int n = 3
+    Output: [1,2,2,3,5,6]
+    ```
 
 ### Explanation
 - Combine the two list and return an array
